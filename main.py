@@ -1,6 +1,7 @@
 import json
 from GPT_USE import *
 from flask import Flask, jsonify, request
+from gevent import pywsgi
 app = Flask(__name__)
 
 @app.route('/GPT_conversation',methods=['POST'])
@@ -21,12 +22,6 @@ def GPT_conversation():
     except Exception as e:
         return jsonify({"code": 500, "message": str(e), "data": None})
 
-# @app.route('/testpsy',methods=['GET'])
-# def test():
-#     return jsonify({"code": 200, "message": "success", "data": ''})
-
 if __name__ == '__main__':
-
-    ip='0.0.0.0'
-    port = 2023
-    app.run(ip, port, debug=False)
+    server = pywsgi.WSGIServer(('0.0.0.0',80),app)
+    server.serve_forever()

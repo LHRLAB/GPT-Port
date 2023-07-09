@@ -22,7 +22,7 @@ curl ipinfo.io/ip
 ## Step 3: Use GPT-Port on Internel Servers
 You can use your GPT service on your internal servers that have access to your Flask-based GPT-Port but not to the OpenAI service with "use_route.py".
 ### 3.1 Set Public IP
-Change "```yourip```" in ```url = 'http://yourip:2023/'``` to your public IP address ([PublicIP] in Step 2.3) in the 3rd line of "use_route.py".
+Change "```yourip```" in ```url = 'http://yourip:80/'``` to your public IP address ([PublicIP] in Step 2.3) in the 3rd line of "use_route.py".
 ### 3.2 Use GPT-Port Service
 You can use the function "GPT" in "use_route.py" to get the equivalent OpenAI api service by simply entering the "input" and "model" name. 
 
@@ -31,7 +31,7 @@ For example:
 ChatGPT Service: 
 ```output = GPT(input="What is ChatGPT", model='gpt-3.5-turbo')``` 
 
-GPT4 Service: 
-```output = GPT(input="What is ChatGPT", model='gpt-4')``` 
+<!-- GPT4 Service: 
+```output = GPT(input="What is ChatGPT", model='gpt-4')```  -->
 
 

@@ -29,4 +29,4 @@ if __name__ == '__main__':
 
     ip='0.0.0.0'
     port = 2023
-    app.run(ip, port, debug=True)
+    app.run(ip, port, debug=False)

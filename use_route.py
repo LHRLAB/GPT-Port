@@ -24,5 +24,6 @@ def GPT(input, model):
     output=response.json()['data']
     return output
 
-output = GPT(input="What is ChatGPT", model='gpt-3.5-turbo')
+# output = GPT(input="What is ChatGPT", model='gpt-3.5-turbo')
+output = GPT(input="What is ChatGPT", model='gpt-4')
 print(output)

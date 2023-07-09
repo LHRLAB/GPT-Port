@@ -13,11 +13,11 @@ You can build GPT-Port in External Jump Server which can access to openai servic
 ```
 nohup python main.py &
 ```
-After successful start, remember the Process Id [PID] for end the service later by kill [PID].
+After successful start, remember the Process Id [PID] for end the service by kill [PID]  later.
 ### 2.3 Check Public IP Address
 You need to check what your public IP address [PublicIP] is in case you want to use GPT-Port service on other servers later.
 ```
-nohup python main.py &
+curl ipinfo.io/ip
 ```
 ## Step 3: Use GPT-Port
 You can use your GPT service on your internal servers that have access to your Flask-based GPT-Port but not to the OpenAI service with "use_route.py".

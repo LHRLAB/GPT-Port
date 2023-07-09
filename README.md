@@ -7,7 +7,7 @@ pip install -r requirements.txt
 ```
 ## Step 2: Build GPT-Port on External Jump Server
 ### 2.1 Set OpenAI API Key
-Change "```your openai api key```" in ```openai.api_key="your openai api key"``` to your own openai api key in the 4th line of "GPT_USE.py".
+Change "```your openai api key```" in ```openai.api_key="your openai api key"``` to your own openai api key in the 2nd line of "GPT_USE.py".
 ### 2.2 Build GPT-Port
 You can build GPT-Port in External Jump Server which can access to openai service.
 ```
@@ -22,7 +22,7 @@ curl ipinfo.io/ip
 ## Step 3: Use GPT-Port on Internel Servers
 You can use your GPT service on your internal servers that have access to your Flask-based GPT-Port but not to the OpenAI service with "use_route.py".
 ### 3.1 Set Public IP
-Change "```yourip```" in ```url = 'http://yourip:2023/'``` to your public IP address ([PublicIP] in Step 2.3) in the 3th line of "use_route.py".
+Change "```yourip```" in ```url = 'http://yourip:2023/'``` to your public IP address ([PublicIP] in Step 2.3) in the 3rd line of "use_route.py".
 ### 3.2 Use GPT-Port Service
 You can use the function "GPT" in "use_route.py" to get the equivalent OpenAI api service by simply entering the "input" and "model" name. 
 

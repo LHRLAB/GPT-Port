@@ -1,12 +1,12 @@
 import requests
 # Get yourip: curl ipinfo.io/ip
-url = 'http://yourip:2023/'
+url = 'http://yourip:80/'
 
 def GPT(input, model):
     if model == 'gpt-3.5-turbo':
         json={
             'conversation': [
-                {"role": "system", "content": ""},
+                {"role": "system", "content": "hello"},
                 {"role": "user", "content": input},
                 ],
             'model': 'gpt-3.5-turbo',
@@ -24,6 +24,6 @@ def GPT(input, model):
     output=response.json()['data']
     return output
 
-# output = GPT(input="What is ChatGPT", model='gpt-3.5-turbo')
-output = GPT(input="What is ChatGPT", model='gpt-4')
+output = GPT(input="What is ChatGPT", model='gpt-3.5-turbo')
+# output = GPT(input="What is ChatGPT", model='gpt-4')
 print(output)

@@ -7,7 +7,7 @@ pip install -r requirements.txt
 ```
 ## Step 2: Build GPT-Port on External Jump Server
 ### 2.1 Set OpenAI API Key
-Change "```your openai api key```" in ```openai.api_key="your openai api key"``` to your openai api key in the 4th line of "GPT_USE.py".
+Change "```your openai api key```" in ```openai.api_key="your openai api key"``` to your own openai api key in the 4th line of "GPT_USE.py".
 ### 2.2 Build GPT-Port
 You can build GPT-Port in External Jump Server which can access to openai service.
 ```

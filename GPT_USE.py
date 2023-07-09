@@ -1,8 +1,5 @@
-from time import sleep
-from log.Logging import *
 import openai
 openai.api_key="your openai api key"
-log = Logger('test','use').getlog()
 
 #GPT_3.5和GPT_4
 def ask(prompt,askText,model="gpt-3.5-turbo",pre_use=None,pre_assistant=None):
@@ -29,9 +26,6 @@ def ask(prompt,askText,model="gpt-3.5-turbo",pre_use=None,pre_assistant=None):
             if num >= 3:
                 got_result = True
             print(e)
-            log.info(model+'use_error:')
-            log.error(str(e))
-            sleep(3)
             return False
 
 def ask_conversation(conversation,model="gpt-3.5-turbo"):
@@ -50,9 +44,6 @@ def ask_conversation(conversation,model="gpt-3.5-turbo"):
             if num >= 3:
                 got_result = True
             print(e)
-            log.info(model+'use_error:')
-            log.error(str(e))
-            sleep(3)
             return False
 def text_davinci3_5(prompt,engine="text-davinci-003",max_tokens=2500):
     got_result = False
@@ -75,9 +66,6 @@ def text_davinci3_5(prompt,engine="text-davinci-003",max_tokens=2500):
             if num>=3:
                 got_result = True
             print(e)
-            log.info(engine+'use_error:')
-            log.error(str(e))
-            sleep(3)
             return False
 
 def text_3(prompt,engine='text-curie-001',max_tokens=1900):#3的最长token少些

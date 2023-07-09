@@ -17,7 +17,7 @@ def GPT(input, model):
                 {"role": "system", "content": ""},
                 {"role": "user", "content": input},
                 ],
-            'model': 'gpt-3.5-turbo',
+            'model': 'gpt-4',
         }        
     response = requests.post(url+'GPT_conversation', json=json)
     assert response.status_code == 200

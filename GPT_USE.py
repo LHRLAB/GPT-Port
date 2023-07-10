@@ -1,5 +1,5 @@
 import openai
-openai.api_key="your openai api key"
+openai.api_key=""
 
 def ask_conversation(conversation,model="gpt-3.5-turbo"):
     got_result = False
@@ -9,9 +9,13 @@ def ask_conversation(conversation,model="gpt-3.5-turbo"):
             response = openai.ChatCompletion.create(
                 model=model,
                 messages=conversation,
-                temperature=0
+                temperature=0,
+                max_tokens=300,
+                top_p=1,
+                frequency_penalty=0,
+                presence_penalty=0,
             )
-            answer = response['choices'][0]['message']['content']
+            answer = response['choices'][0]['message']
             return answer
         except Exception as e:
             if num >= 3:
